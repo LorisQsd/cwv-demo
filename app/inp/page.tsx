@@ -1,9 +1,11 @@
+import { FirstExample } from "./_components/semantics/FirstExample/FirstExample";
+import { SecondExample } from "./_components/semantics/SecondExample/SecondExample";
+
 const INPPage = () => (
-  <main className="grow flex items-center justify-center">
-    <div>
-      <div>First Element</div>
-      <div>Second Element</div>
-    </div>
+  <main className="grow flex flex-col gap-8 items-center justify-center">
+    <FirstExample />
+
+    <SecondExample />
   </main>
 );
 
