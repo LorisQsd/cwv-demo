@@ -1,5 +1,8 @@
+import { Divider } from "@/components/Divider";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
+import { Footer } from "./_components/footer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,9 +28,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
+        <header className="my-6 flex items-center flex-col">
+          <Link
+            href="/"
+            className="text-center font-bold text-4xl hover:scale-105 duration-300"
+          >
+            Core Web Vitals Demo
+          </Link>
+          <Divider />
+        </header>
         {children}
+        <Footer />
       </body>
     </html>
   );
